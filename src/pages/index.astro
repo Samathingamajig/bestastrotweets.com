@@ -3,6 +3,7 @@
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 
+const origin = new URL(Astro.request.url).origin;
 ---
 
 <html lang="en">
@@ -13,7 +14,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="og:title" content="Best Astro Tweets" />
 		<meta name="og:description" content="A curated list of the best tweets from @astrodotbuild" />
-		<meta name="og:image" content={`${Astro.url.origin}/image-of-twitter.png`}>
+		<meta name="og:image" content={`${origin}/image-of-twitter.png`}>
 	</head>
 	<body class="bg-[rgb(15,23,42)] grid place-items-center min-h-screen v-screen p-8">
 		<main class="flex flex-col item space-y-10">
